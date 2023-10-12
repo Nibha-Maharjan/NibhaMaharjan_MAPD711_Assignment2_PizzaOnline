@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash">#EDC163</color>
+    <color name="meatsup">#F8AD9D</color>
+    <color name="hawaii">#839791</color>
+    <color name="vegg">#93E5AB</color>
+    <color name="medi">#4E878C</color>
+    <color name="cheddar">#F7E8A4</color>
 </resources>

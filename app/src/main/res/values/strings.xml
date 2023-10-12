@@ -9,4 +9,13 @@
     <string name="menu4">Mediterranean</string>
     <string name="menu5">Cheddar Supreme</string>
 
+<!--    Pizza Sizes-->
+    <string name="pizza_small">Small 4 Inches</string>
+    <string name="pizza_medium">Medium 8 Inches</string>
+    <string name="pizza_big">Big 12 Inches</string>
+    <string name="pizza_large">Large 16 Inches</string>
+
+<!--    Button Text-->
+    <string name="orderbutton">Order</string>
+
 </resources>

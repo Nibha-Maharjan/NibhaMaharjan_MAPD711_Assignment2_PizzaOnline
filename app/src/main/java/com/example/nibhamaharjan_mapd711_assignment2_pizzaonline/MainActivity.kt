@@ -1,3 +1,8 @@
+// Name: Nibha Maharjan
+// Student ID: 301282952
+// Date Completed: 13th Oct 2023
+// App Desc: Pizza app for Second Assignment
+
 package com.example.nibhamaharjan_mapd711_assignment2_pizzaonline
 
 import androidx.appcompat.app.AppCompatActivity
@@ -27,31 +32,31 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId) {
             R.id.nav_home -> {
                 setContentView(R.layout.activity_main)
-                Toast.makeText(this@MainActivity, "Welcome to Cent Pizza", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "Welcome to Cent Pizza", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_meat -> {
                 setContentView(R.layout.activity_meatsupreme)
-                Toast.makeText(this@MainActivity, "Order a Meat Supreme Pizza", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "Order a Meat Supreme Pizza", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_hawaii -> {
                 setContentView(R.layout.activity_superhawaiian)
-                Toast.makeText(this, "Order a Super Hawaiian Pizza", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Order a Super Hawaiian Pizza", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_veggie -> {
                 setContentView(R.layout.activity_veggie)
-                Toast.makeText(this, "Order a Veggie Pizza", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Order a Veggie Pizza", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_meddi -> {
                 setContentView(R.layout.activity_mediterranean)
-                Toast.makeText(this, "Order a Mediterranean Pizza", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Order a Mediterranean Pizza", Toast.LENGTH_SHORT).show()
             }
 
             R.id.nav_cheddar -> {
                 setContentView(R.layout.activity_cheddarsupreme)
-                Toast.makeText(this, "Order a Cheddar Supreme Pizza", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Order a Cheddar Supreme Pizza", Toast.LENGTH_SHORT).show()
             }
         }
         return true
