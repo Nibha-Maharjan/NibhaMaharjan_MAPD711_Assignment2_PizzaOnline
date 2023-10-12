@@ -1,12 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
 
     <style name="Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline" parent="Base.Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline" />
-    
+
+    <!-- Splash Screen -->
     <style name="Theme.App.SplashScreen" parent="Base.Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline">
         <item name="windowSplashScreenBackground">@color/splash</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/centpizzalogos</item>

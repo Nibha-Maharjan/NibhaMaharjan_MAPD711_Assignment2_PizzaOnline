@@ -7,8 +7,12 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Splash Screen Init and Time shown
         Thread.sleep(3000)
         installSplashScreen()
         setContentView(R.layout.activity_main)
+        //Action bar title changed to Cent Pizza
+        supportActionBar?.title = "Cent Pizza"
+
     }
 }
