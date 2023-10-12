@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">NibhaMaharjan_MAPD711_Assignment2_PizzaOnline</string>
+    <!--    Menu items -->
+    <string name="menuTitle">Pizza</string>
+    <string name="navhome">Home</string>
+    <string name="menu1">Meat Supreme</string>
+    <string name="menu2">Super Hawaiian</string>
+    <string name="menu3">Veggie</string>
+    <string name="menu4">Mediterranean</string>
+    <string name="menu5">Cheddar Supreme</string>
+
 </resources>

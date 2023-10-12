@@ -12,11 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline"
         tools:targetApi="31">
-
+        <activity
+            android:name=".cheddarsupreme"
+            android:exported="false" />
+        <activity
+            android:name=".mediterranean"
+            android:exported="false" />
+        <activity
+            android:name=".veggie"
+            android:exported="false" />
+        <activity
+            android:name=".superhawaiian"
+            android:exported="false" />
+        <activity
+            android:name=".meatsupreme"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.App.SplashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.App.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
