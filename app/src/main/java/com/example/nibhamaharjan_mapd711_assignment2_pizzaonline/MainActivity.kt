@@ -2,6 +2,10 @@
 // Student ID: 301282952
 // Date Completed: 13th Oct 2023
 // App Desc: Pizza app for Second Assignment
+// Pizza screen => Size - Intent used
+// Size => Topping - Intent used
+// Topping => Checkout - SharedPref used
+// Final page - Both intent and shared used
 
 package com.example.nibhamaharjan_mapd711_assignment2_pizzaonline
 
@@ -29,10 +33,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //Menu Inflate
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.nav_menu,menu)
         return true
     }
+    //Menu item Click Action and Toast
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val intent: Intent = when (item.itemId) {
             R.id.nav_home -> {

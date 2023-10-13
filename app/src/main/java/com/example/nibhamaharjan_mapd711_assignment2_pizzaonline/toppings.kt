@@ -11,15 +11,14 @@ import android.widget.TextView
 
 class toppings : AppCompatActivity() {
 
+    //Declaring Variables
     private lateinit var textName : TextView
-
     private lateinit var checkBox: CheckBox
     private lateinit var checkBox2: CheckBox
     private lateinit var checkBox3: CheckBox
     private lateinit var checkBox4: CheckBox
     private lateinit var checkBox5: CheckBox
     private lateinit var checkBox6: CheckBox
-
     private lateinit var checkoutButton: Button
     private lateinit var sharedPrefs: SharedPreferences
 
@@ -29,6 +28,7 @@ class toppings : AppCompatActivity() {
 
         title = "Toppings Page"
 
+        //Assigning Variable with UI ID
         textName = findViewById(R.id.textView)
 
         checkBox = findViewById(R.id.checkBox)
@@ -38,20 +38,20 @@ class toppings : AppCompatActivity() {
         checkBox5 = findViewById(R.id.checkBox5)
         checkBox6 = findViewById(R.id.checkBox6)
 
-
-
-
+        //Getting intent data
         val pizzaSize = intent.getStringExtra("Pizza_Size")
         val pizzaName = intent.getStringExtra("Pizza_Name")
 
+        //Displaying Order reminder
         textName.text = "You have ordered a $pizzaName Pizza in $pizzaSize"
 
+        //Starting SharedPrefs
         sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
 
         checkoutButton = findViewById(R.id.button)
         checkoutButton.setOnClickListener {
-            // Save checkbox names to SharedPreferences as a comma-separated String
+            // Save checkbox names to SharedPrefs as a comma-separated String
             val selectedToppings = StringBuilder()
             if (checkBox.isChecked) {
                 selectedToppings.append(checkBox.text).append(", ")
@@ -71,7 +71,7 @@ class toppings : AppCompatActivity() {
             if (checkBox6.isChecked) {
                 selectedToppings.append(checkBox6.text).append(", ")
             }
-
+            //Shipping details in sharedprefs
             val pizzasizeDetail = sharedPrefs.edit()
             val pizzanameDetail = sharedPrefs.edit()
             val editor = sharedPrefs.edit()

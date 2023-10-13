@@ -23,18 +23,18 @@ class mediterranean : AppCompatActivity() {
         button = findViewById(R.id.button3)
 
         button.setOnClickListener {
-            // Getting the checked radio button id from the radio group
+
             val selectedOption: Int? = radioGroupa?.checkedRadioButtonId
 
-            // If no radio button is selected, show a toast message
+
             if (selectedOption == null || selectedOption == -1) {
                 Toast.makeText(this, "Please select a pizza size", Toast.LENGTH_SHORT).show()
             } else {
-                // Assigning id of the checked radio button
+
                 val radioButton = findViewById<RadioButton>(selectedOption)
 
                 val pizzaName = "Mediterranean"
-                // Start the ToppingsActivity with selected pizza size data
+                // Moving to Topping with size data
                 startActivity(
                     Intent(this, toppings::class.java)
                         .putExtra("Pizza_Size", radioButton.text.toString())
