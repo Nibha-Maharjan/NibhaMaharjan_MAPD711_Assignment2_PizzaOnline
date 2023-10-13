@@ -18,4 +18,11 @@
     <!--    Button Text-->
     <string name="orderbutton">Order</string>
 
+<!--    Payment type-->
+    <string-array name="ctype">
+        <item>Visa</item>
+        <item>MasterCard</item>
+        <item>American Express</item>
+    </string-array>
+
 </resources>
