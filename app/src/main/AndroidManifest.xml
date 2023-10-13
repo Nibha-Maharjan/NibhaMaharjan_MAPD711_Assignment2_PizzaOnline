@@ -13,19 +13,27 @@
         android:theme="@style/Theme.NibhaMaharjan_MAPD711_Assignment2_PizzaOnline"
         tools:targetApi="31">
         <activity
+            android:name=".toppings"
+            android:exported="false" />
+        <activity
             android:name=".cheddarsupreme"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".mediterranean"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".veggie"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".superhawaiian"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".meatsupreme"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
