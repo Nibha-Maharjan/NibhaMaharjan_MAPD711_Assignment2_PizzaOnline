@@ -1,6 +1,8 @@
 package com.example.nibhamaharjan_mapd711_assignment2_pizzaonline
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -19,7 +21,7 @@ class toppings : AppCompatActivity() {
     private lateinit var checkBox6: CheckBox
 
     private lateinit var checkoutButton: Button
-    private lateinit var selectedToppings: ArrayList<String>
+    private lateinit var sharedPrefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,42 +39,52 @@ class toppings : AppCompatActivity() {
         checkBox6 = findViewById(R.id.checkBox6)
 
 
+
+
         val pizzaSize = intent.getStringExtra("Pizza_Size")
         val pizzaName = intent.getStringExtra("Pizza_Name")
 
         textName.text = "You have ordered a $pizzaName Pizza in $pizzaSize"
 
-        selectedToppings = ArrayList()
+        sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+
 
         checkoutButton = findViewById(R.id.button)
         checkoutButton.setOnClickListener {
-            // Check if each CheckBox is checked and add its text to the ArrayList
+            // Save checkbox names to SharedPreferences as a comma-separated String
+            val selectedToppings = StringBuilder()
             if (checkBox.isChecked) {
-                selectedToppings.add(checkBox.text.toString())
+                selectedToppings.append(checkBox.text).append(", ")
             }
             if (checkBox2.isChecked) {
-                selectedToppings.add(checkBox2.text.toString())
+                selectedToppings.append(checkBox2.text).append(", ")
             }
             if (checkBox3.isChecked) {
-                selectedToppings.add(checkBox3.text.toString())
+                selectedToppings.append(checkBox3.text).append(", ")
             }
             if (checkBox4.isChecked) {
-            selectedToppings.add(checkBox4.text.toString())
+                selectedToppings.append(checkBox4.text).append(", ")
             }
             if (checkBox5.isChecked) {
-            selectedToppings.add(checkBox5.text.toString())
+                selectedToppings.append(checkBox5.text).append(", ")
             }
             if (checkBox6.isChecked) {
-            selectedToppings.add(checkBox6.text.toString())
+                selectedToppings.append(checkBox6.text).append(", ")
             }
 
-            // Create an Intent to start the CheckoutActivity
-            val intent = Intent(this, checkout::class.java)
+            val pizzasizeDetail = sharedPrefs.edit()
+            val pizzanameDetail = sharedPrefs.edit()
+            val editor = sharedPrefs.edit()
+            editor.putString("selected_toppings", selectedToppings.toString())
+            pizzasizeDetail.putString("psize", pizzaSize.toString())
+            pizzanameDetail.putString("pname", pizzaName.toString())
+            editor.putString("selected_toppings", selectedToppings.toString())
+            editor.apply()
+            pizzanameDetail.apply()
+            pizzasizeDetail.apply()
+
             // Pass the selected toppings as extra data
-            intent.putStringArrayListExtra("selected_Toppings", selectedToppings)
-            intent.putExtra("pizzaSize_Check", pizzaSize)
-            intent.putExtra("pizzaName_Check", pizzaName)
-            startActivity(intent)
+            startActivity(Intent(this, checkout::class.java))
         }
 
 
